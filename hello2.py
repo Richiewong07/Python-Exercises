@@ -1,0 +1,5 @@
+name = input('What is your name?')
+name = name.upper()
+letter = len(name)
+print('HELLO ' + name + '!')
+print('YOUR NAME HAS ' + str(letter) + ' LETTERS IN IT! AWESOME!')
