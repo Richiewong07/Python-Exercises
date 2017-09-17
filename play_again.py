@@ -1,9 +1,11 @@
-def yes_or_no(question):
+
+def yes_or_no():
     while True:
         reply = input('Do you want to play again (Y/N)')
         if reply == 'Y':
-            return True
+            print ('True')
         elif reply == 'N':
-            return False
-        else:
-            print ("Respond with Y or No")
+            print ('False')
+            breakc
+
+yes_or_no()
