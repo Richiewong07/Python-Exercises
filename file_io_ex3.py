@@ -7,3 +7,5 @@ contents = file_handle.read()
 
 count_letter = {}
 count_word = {}
+
+### Need to finish
