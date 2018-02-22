@@ -1,9 +1,23 @@
+# myfile = open('/Users/richiewong/Documents/Python-Exercises/python-udemy/test.txt')
+#
+# print(myfile.read())
+#
+# myfile.seek(0)
+#
+# print(myfile.readline())
 
-new_list = ['a', 'e', 'x', 'b', 'c']
-num_list = [4, 1, 8, 3]
+# myfile.close()
 
-num_list.reverse()
 
-my_sorted_list = num_list
 
-print(my_sorted_list)
+# with open('test.txt', mode='r') as my_test_file:
+#     contents = my_test_file.read()
+#     print(contents)
+
+
+
+with open('test.txt', mode='a') as f:
+    f.write('FOUR ON FOURTH')
+
+with open('test.txt', mode='r') as f:
+    print(f.read())
