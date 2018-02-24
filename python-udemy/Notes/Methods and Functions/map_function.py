@@ -17,4 +17,6 @@ def splicer(mystring):
 
 names = ['Andy', 'Eve', 'Sally']
 
-print(list(map(splicer,names)))
+results = list(map(splicer,names))
+
+print(results)
