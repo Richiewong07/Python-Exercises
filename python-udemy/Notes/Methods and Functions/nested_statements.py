@@ -1,8 +1,12 @@
-name = 'THIS IS  GLOBAL STRING'
+x = 50
 
-def string():
+def func(x):
+    print(f'X is {x}')
 
-    def hello():
-        print('Hello ' +name)
+    # Local Reassignment!
+    x = 200
+    print(f'I JUST LOCALLY CHANGED X TO {x}')
 
-        hello
+
+print(x)
+func(x)
