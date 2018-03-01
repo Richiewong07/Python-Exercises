@@ -24,6 +24,7 @@ def player_input():
     if marker == 'X':
         return ('X', 'O')
     else:
+        return('0', 'X')
 
 
 def place_marker(board, marker, position):
@@ -77,12 +78,12 @@ def full_board_check(board):
 def player_choice(board):
     position = 0
     while position not in [1, 2, 3, 4, 5, 6, 7, 8, 9] or not space_check(board, position):
-        position = int(input('Choose a position: (1-9)'))
+        position = int(input('Choose a position: (1-9) '))
     return position
 
 
 def replay():
-    choice = input('Play again? Enter Yes or No')
+    choice = input('Play again? Enter Yes or No ')
     return choice == 'Yes'
 
 # WHILE LOOP TO KEEP RUNNING THE GAME
@@ -98,9 +99,9 @@ while True:
     turn = choose_first()
     print(turn + ' will go first')
 
-    play_game = input('Ready to play? y or no?')
+    play_game = input('Ready to play? Yes or No? ')
 
-    if play_game == 'y':
+    if play_game == 'Yes':
         game_on = True
     else:
         game_on = False
