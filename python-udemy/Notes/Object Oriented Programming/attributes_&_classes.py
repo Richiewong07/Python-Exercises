@@ -1,8 +1,11 @@
 class Dog():
 
+    # FIRST METHOD OF THE  CLASS
+    # INIT: IS THE CONSTRUCTOR FOR THE CALL, CALLED AUTOMATICALLY WHEN YOU CREATE AN INSTANCE OF THE CLASS
+    # SELF: REPRESENTS INSTANCE OF THE OBJECT ITSELF
     def __init__(self, breed, name, spots):
 
-        # ATTRIBUTES
+        # ATTRIBUTES: CHARACTERISTICS OF THE OBJECT
         # WE TAKE IN THE ARGUEMENT
         # ASSIGN IT USING self.attribute_name
         self.breed = breed
