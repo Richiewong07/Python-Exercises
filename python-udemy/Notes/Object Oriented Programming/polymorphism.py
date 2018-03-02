@@ -1,3 +1,6 @@
+
+# TWO SEPERATE CLASS WITH THE SAME METHOD NAMES
+
 # class Dog():
 #
 #     def __init__(self, name):
