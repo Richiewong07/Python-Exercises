@@ -14,8 +14,15 @@ class Account():
         self.owner = owner
         self.balance = balance
 
+    def __str__(self):
+        return f'Account owner: {self.owner} \n Account balance: ${self.balance}'
+
     def deposit(self):
         pass
 
     def withdraw(self):
         pass
+
+acct1 = Account('Jose', 100)
+
+print(acct1)
