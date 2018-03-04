@@ -19,12 +19,16 @@ class Account():
 
     def deposit(self, deposit_amount):
         self.balance += deposit_amount
-        print('Deposite Accepted')
+        print(f'Deposit Amount: ${deposit_amount}')
+        print('Deposit Accepted')
+        print(f'New Account Balance: ${self.balance}')
 
     def withdraw(self, withdraw_amount):
+        print(f'Withdraw Amount: ${withdraw_amount}')
         if self.balance >= withdraw_amount:
             self.balance -= withdraw_amount
             print('Withdrawal Accepted')
+            print(f'New Account Balance: ${self.balance}')
         else:
             print('Fund Unavailable!')
 
@@ -33,9 +37,7 @@ acct1 = Account('Jose', 100)
 print(acct1)
 
 acct1.deposit(50)
-print(acct1)
 
 acct1.withdraw(50)
-print(acct1)
 
 acct1.withdraw(150)
