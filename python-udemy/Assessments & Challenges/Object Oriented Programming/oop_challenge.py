@@ -15,7 +15,7 @@ class Account():
         self.balance = balance
 
     def __str__(self):
-        return f'Account owner: {self.owner} \nAccount balance: ${self.balance}'
+        return f'Account Owner: {self.owner} \nAccount Balance: ${self.balance}'
 
     def deposit(self, deposit_amount):
         self.balance += deposit_amount
@@ -30,7 +30,7 @@ class Account():
             print('Withdrawal Accepted')
             print(f'New Account Balance: ${self.balance}')
         else:
-            print('Fund Unavailable!')
+            print('Withdrawal Denined. Fund Unavailable!')
 
 
 acct1 = Account('Jose', 100)
