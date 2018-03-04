@@ -30,7 +30,7 @@ class Account():
             print('Withdrawal Accepted')
             print(f'New Account Balance: ${self.balance}')
         else:
-            print('Withdrawal Denined. Fund Unavailable!')
+            print('Withdrawal Denined. Sorry not enough funds!')
 
 
 acct1 = Account('Jose', 100)
