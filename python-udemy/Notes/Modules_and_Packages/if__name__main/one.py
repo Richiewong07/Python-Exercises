@@ -5,7 +5,15 @@ def func():
 
 print('TOP LEVEL IN ONE.PY')
 
-if __name__ == '__main__':
-    print('ONE.PY is being run directly!')
-else:
-    print('ONE.PY has been imported!')
+def function():
+    pass
+def function2():
+    pass
+
+if __name__ == '__main__':  # RUN THE SCRIPT!
+    function2()
+    function()
+
+#     print('ONE.PY is being run directly!')
+# else:
+#     print('ONE.PY has been imported!')
