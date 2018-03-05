@@ -12,16 +12,33 @@
 # Thank you, your number squared is:  4
 
 
+# def ask():
+#
+#     while True:
+#         try:
+#             n = int(input('Enter a number'))
+#         except:
+#             print('Please try again! \n')
+#             continue
+#         else:
+#             break
+#
+#     print('Your number squared is: ')
+#     print(n ** 2)
+
+
 def ask():
 
-    while True:
+    # WAITING FOR CORRECT RESPONSE
+    waiting = True
+    while waiting:
         try:
             n = int(input('Enter a number'))
         except:
             print('Please try again! \n')
             continue
         else:
-            break
+            waiting = False
 
     print('Your number squared is: ')
     print(n ** 2)
