@@ -8,3 +8,20 @@
 # good -> 20%
 # fair -> 15%
 # bad -> 10%
+
+input_amount = int(input('Enter cost of the bill: '))
+input_service = input('Enter level of service (Good, Fair, Bad): ').capitalize()
+
+def tip_percentage(cost, service):
+    if service == 'Good':
+        tip = 0.20
+    elif service == 'Fair':
+        tip = 0.15
+    elif service == 'Bad':
+        tip = 0.10
+
+    total_cost = cost + (cost * tip)
+    return total_cost
+
+total_bill = tip_percentage(input_amount, input_service)
+print('Your total bill is ${}.'.format(total_bill))
