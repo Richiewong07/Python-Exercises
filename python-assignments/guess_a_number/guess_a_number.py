@@ -34,7 +34,6 @@ def guess_number():
             count -=1
 
 
-
         if count < 0:
             print('You have 0 gusses left. You lose!')
             play_again()
