@@ -16,30 +16,15 @@
 # 6 5
 # 3 4
 
+m1 = [[1, 3], [2, 4]]
+m2 = [[5, 2], [1, 0]]
 
+def matrix_add(a, b):
 
+    for i in range(0, len(a)):
+        row = []
+        for j in range(0, len(a[0])):
+            row.append(a[i][j] + b[i][j])
+        print(row)
 
-
-m1 = [
-  [1, 3],
-  [2, 4],
-]
-
-m2 = [
-  [5, 2],
-  [1, 0],
-]
-
-answer = []
-for i in range(0, len(m1)):
-  row = m1[i]
-  temp = []
-
-  for j in range(0, len(row)):
-    print(i, j)
-    ans[i][j] = m1[i][j] + m2[i][j]
-    temp.append(ans)
-
-  answer.append(temp)
-
-print(answer)
+matrix_add(m1, m2)
