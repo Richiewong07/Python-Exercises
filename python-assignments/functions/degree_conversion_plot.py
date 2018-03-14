@@ -1,3 +1,6 @@
+# 7. Degree Conversion
+# Write a function that takes a temperature in Celcius and converts it Fahrenheit. Plot it on a graph.
+
 import matplotlib.pyplot as plot
 
 def f(x):
