@@ -1,12 +1,13 @@
-phonebook = {
-  'Alice': '703-493-1834',
-  'Bob': '857-384-1234',
-  'Elizabeth': '484-584-2923'
-}
+import json
 
 
 def look_up():
-    person_name = input("What is the person's name: ").upper()
+    name = input("What is the person's name: ").capitalize()
+
+    with open('phone_book.json', 'r') as file_handle:
+        contacts = json.load(file_handle)
+        # print(contacts[name])
+        print(contacts.get(name, 'Name not found'))
 
 
 
