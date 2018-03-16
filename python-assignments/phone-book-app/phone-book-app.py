@@ -28,20 +28,35 @@ def set_entry():
     with open('phone_book.json', 'w') as file_handle:
         json.dump(contacts, file_handle)
 
+    print('Entry stored for ' + name)
+
 # 3. If they choose to delete an entry, you will prompt them for the person's name and delete the given person's entry.
 
 def delete_entry():
-    pass
+
+    contacts = {}
+
+    name = input("Which contact do you want to delete?: ").capitalize()
+    contacts[name] = {"phone": None, "email": None, "URL": None}
+    del(contacts[name])
+
+    with open('phone_book.json', 'w') as file_handle:
+        json.dump(contacts, file_handle)
+
+    print('Entry deleted for ' + name)
+
 
 # 4. If they choose to list all entries, you will go through all entries in the dictionary and print each out to the terminal.
 
 def list_all():
-    pass
+    with open("phone_book.json", "r") as file_handle:
+        contacts = json.load(file_handle)
+        print(contacts)
 
 # 5. If they choose to quit, end the program.
 
 def quit():
-    pass
+    print('You exited. Goodbye!')
 
 
 
@@ -58,11 +73,11 @@ def main():
         elif user_input == 2:
             set_entry()
         elif user_input == 3:
-            print(3)
+            delete_entry()
         elif user_input == 4:
-            print(4)
+            list_all()
         elif user_input == 5:
-            print(5)
+            quit()
         break
 
 
