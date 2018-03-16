@@ -21,9 +21,10 @@ def set_entry():
     contacts[name] = {"phone": None, "email": None, "URL": None}
 
     phone = input("Enter phone number (XXX-XXX-XXX): ")
-    contacts[name]['phone'] = phone
-    # email = input("Enter email: ")
-    # url = input("Enter URL")
+    email = input("Enter email: ")
+    url = input("Enter URL: ")
+
+    contacts[name].update({"phone": phone, "email": email, "URL": url})
 
     with open('phone_book.json', 'w') as file_handle:
         json.dump(contacts, file_handle)
@@ -38,7 +39,8 @@ def delete_entry():
 
     name = input("Which contact do you want to delete?: ").capitalize()
     contacts[name] = {"phone": None, "email": None, "URL": None}
-    del(contacts[name])
+
+    del contacts[name]
 
     with open('phone_book.json', 'w') as file_handle:
         json.dump(contacts, file_handle)
@@ -79,9 +81,6 @@ def main():
         elif user_input == 5:
             quit()
         break
-
-
-
 
 
 if __name__ == '__main__':
