@@ -14,7 +14,6 @@ def look_up():
 # 2. If they choose to set an entry, you will prompt them for the person's name and the person's phone number,
 
 def set_entry():
-
     contacts = {}
 
     name = input("Enter name: ").capitalize()
