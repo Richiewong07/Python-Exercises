@@ -8,20 +8,16 @@ class Person:
         self.email = email
         self.phone = phone
         self.friend = friend
-        self.greeting_count = 0
         self.greeting_list = greeting_list
-        self.num_unique_people_greeted = 0
 
     def greet(self, other_person):
-        self.greeting_count += 1
-        print('Hello {}, I am {}!'.format(other_person.name, self.name))
-        print('Greeting count: {}'.format(self.greeting_count))
-
         if other_person.name not in self.greeting_list:
-            self.num_unique_people_greeted += 1
             self.greeting_list.append(other_person.name)
-        print('Unique people greeted: {}'.format(self.num_unique_people_greeted))
+        print('Hello {}, I am {}!'.format(other_person.name, self.name))
 
+    def unique_people_greeted(self):
+        self.unique_people_greeted = len(self.greeting_list)
+        print('Unique people greeted: {}'.format(self.unique_people_greeted))
 
     def print_contact_info(self):
         print(self.name, self.email, self.phone)
@@ -96,6 +92,11 @@ class Person:
 sonny = Person('Sonny', 'sonny@hotmail.com', '483-485-4948')
 jordan = Person('Jordan', 'jordan@aol.com', '495-586-3456')
 ann = Person('Ann', 'ann@aol.com', '111-111-1111')
+richie = Person('Richie', 'richiewong07@yahoo.com', '281-702-7171')
 
 jordan.greet(sonny)
 jordan.greet(ann)
+jordan.greet(richie)
+
+
+jordan.unique_people_greeted()
