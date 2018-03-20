@@ -26,8 +26,8 @@ class Hero(Character):
 
     def attack(self, enemy):
         # DOUBLE DAMAGE ADDED TO HERO
-        probability = randint(1,10)
-        if probability == 2:
+        prob = randint(1,10)
+        if prob == 2:
             self.power *= 2
             print('DOUBLE DAMAGE ACTIATED FOR THE HERO! POWER INCREASE FROM 5 TO 10')
         enemy.health -= self.power
@@ -38,7 +38,7 @@ class Hero(Character):
 
     def attack_zero(self, enemy):
         enemy.health -= 0
-        print("{} done 0 damage to the {0}. {0} cannot die!".format(self.name, enemy.name))
+        print("{0} done 0 damage to the {1}. {1} cannot die!".format(self.name, enemy.name))
 
 
 
@@ -59,7 +59,25 @@ class Medic(Character):
         super().__init__(name, health, power)
 
     def recuperate(self):
-        probability randint(1,10)
-        if probability == 2:
+        prob = randint(1,10)
+        if prob <= 2:
             self.health += 2
             print('{} recuperate 2 health points!'.format(self.name))
+
+
+class Shadow(Character):
+
+    def __init__(self, name, health, power):
+        super().__init__(name, health, power)
+
+    def take_damage(self, enemy):
+        prob = randint(1,10)
+        if prob >= 9:
+            self.health -= enemy.power
+            print("The {} does {} damage to the {}.".format(enemy.name, enemy.power, shadow.name))
+
+            if shadow.health <= 0:
+                print("The {} is dead.".format(shawdow.name))
+
+        else:
+            print('{} did NO DAMAGE to the {}'.format(enemy.name, self.name))
