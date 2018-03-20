@@ -1,5 +1,6 @@
 class Character():
-    def __init__(self, health, power):
+    def __init__(self, name, health, power):
+        self.name = name
         self.health = health
         self.power = power
 
@@ -7,39 +8,59 @@ class Character():
         while self.health > 0:
             return True
 
-class Hero(Character):
 
     def attack(self, enemy):
         enemy.health -= self.power
-        print("You do {} damage to the goblin.".format(self.power))
+        print("The {} does {} damage to the {}.".format(self.name, self.power, enemy.name))
         if enemy.health <= 0:
-            print("The goblin is dead.")
+            print("The {} are dead.".format(enemy.name))
+
+    def print_status(self):
+        print("The {} has {} health and {} power.".format(self.name, self.health, self.power))
+
+class Hero(Character):
+
+    def __init__(self, name, health, power):
+        super().__init__(name, health, power)
+
+    # def attack(self, enemy):
+    #     enemy.health -= self.power
+    #     print("{} do {} damage to the {}.".format(self.name, self.power, enemy.name))
+    #     if enemy.health <= 0:
+    #         print("The {} is dead.".format(enemy.name))
 
     def attack_zero(self, enemy):
         enemy.health -= 0
-        print("You done 0 damage to the zombie. Zombie cannot die!")
+        print("You done 0 damage to the {0}. {0} cannot die!".format(enemy.name))
 
-    def print_status(self):
-        print("You have {} health and {} power.".format(self.health, self.power))
+    # def print_status(self):
+    #     print("{} have {} health and {} power.".format(self.name, self.health, self.power))
 
 
 class Goblin(Character):
 
-    def attack(self, enemy):
-        enemy.health -= self.power
-        print("The Goblin does {} damage to you.".format(self.power))
-        if enemy.health <= 0:
-            print("You are dead.")
+    def __init__(self, name, health, power):
+        super().__init__(name, health, power)
 
-    def print_status(self):
-        print("The Goblin has {} health and {} power.".format(self.health, self.power))
+    # def attack(self, enemy):
+    #     enemy.health -= self.power
+    #     print("The {} does {} damage to the {}.".format(self.name, self.power, enemy.name))
+    #     if enemy.health <= 0:
+    #         print("{} are dead.".format(self.name))
+    #
+    # def print_status(self):
+    #     print("The {} has {} health and {} power.".format(self.name, self.health, self.power))
 
 class Zombie(Character):
-    def attack(self, enemy):
-        enemy.health -= self.power
-        print("The Zombie does {} damage to you.".format(self.power))
-        if enemy.health <= 0:
-            print("You are dead.")
 
-    def print_status(self):
-        print("The Zombie has {} health and {} power.".format(self.health, self.power))
+    def __init__(self, name, health, power):
+        super().__init__(name, health, power)
+
+    # def attack(self, enemy):
+    #     enemy.health -= self.power
+    #     print("The {} does {} damage to the {}.".format(enemy.name, self.power, self.name))
+    #     if enemy.health <= 0:
+    #         print("{} are dead.".format(self.name))
+    #
+    # def print_status(self):
+    #     print("The {} has {} health and {} power.".format(self.name, self.health, self.power))

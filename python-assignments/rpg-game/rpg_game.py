@@ -1,9 +1,9 @@
 from hero_rpg import *
 
 def main():
-    hero = Hero(10,5)
-    goblin = Goblin(6,2)
-    zombie = Zombie(5,5)
+    hero = Hero('Hero', 10, 5)
+    goblin = Goblin('Goblin', 6 ,2)
+    zombie = Zombie('Zombie', 5 ,5)
 
     choose_enemy = input('Who do you want to fight? (Goblin or Zombie): ')
 
