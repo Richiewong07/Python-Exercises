@@ -27,7 +27,7 @@ class Goblin(Character):
 
     def attack(self, enemy):
         enemy.health -= self.power
-        print("The goblin does {} damage to you.".format(self.power))
+        print("The Goblin does {} damage to you.".format(self.power))
         if enemy.health <= 0:
             print("You are dead.")
 
@@ -37,7 +37,7 @@ class Goblin(Character):
 class Zombie(Character):
     def attack(self, enemy):
         enemy.health -= self.power
-        print("The zombie does {} damage to you.".format(self.power))
+        print("The Zombie does {} damage to you.".format(self.power))
         if enemy.health <= 0:
             print("You are dead.")
 
