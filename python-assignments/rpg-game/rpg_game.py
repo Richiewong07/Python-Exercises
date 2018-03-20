@@ -1,11 +1,15 @@
 from hero_rpg import *
 
-def main():
-    hero = Hero('Hero', 10, 5)
-    goblin = Goblin('Goblin', 6 ,2)
-    zombie = Zombie('Zombie', 5 ,5)
+hero = Hero('Hero', 10, 5)
+goblin = Goblin('Goblin', 6 ,2)
+zombie = Zombie('Zombie', 5 ,5)
 
+def main():
+
+    print('WELCOME TO HERO RPG GAME.')
+    print()
     choose_enemy = input('Who do you want to fight? (Goblin or Zombie): ')
+    print()
 
     if choose_enemy == 'Goblin':
         while goblin.alive() and hero.alive():
@@ -30,6 +34,8 @@ def main():
 
             if goblin.alive():
                 goblin.attack(hero)
+
+
 
     elif choose_enemy == 'Zombie':
         while zombie.alive() and hero.alive():
