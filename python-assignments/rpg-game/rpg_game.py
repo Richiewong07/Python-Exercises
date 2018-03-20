@@ -1,10 +1,10 @@
 from hero_rpg import *
 
-hero = Hero('Hero', 10, 5)
-goblin = Goblin('Goblin', 6 ,2)
-zombie = Zombie('Zombie', 5 ,5)
-medic = Medic('Medic', 10, 3)
-shadow = Shadow('Shawdow', 1, 4)
+hero = Hero('Hero', 10, 5, 0)
+goblin = Goblin('Goblin', 6 ,2, 5)
+zombie = Zombie('Zombie', 5 ,1, 100)
+medic = Medic('Medic', 10, 3, 6)
+shadow = Shadow('Shawdow', 1, 4, 4)
 
 def main():
 
@@ -54,4 +54,9 @@ def main():
         if enemy.alive():
             enemy.attack(hero)
 
-main()
+
+    enemy.dead()
+
+
+if __name__ == '__main__':
+    main()

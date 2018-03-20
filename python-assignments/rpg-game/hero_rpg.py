@@ -1,10 +1,11 @@
 from random import *
 
 class Character():
-    def __init__(self, name, health, power):
+    def __init__(self, name, health, power, bounty):
         self.name = name
         self.health = health
         self.power = power
+        self.bounty = bounty
 
     def alive(self):
         while self.health > 0:
@@ -19,10 +20,13 @@ class Character():
     def print_status(self):
         print("The {} has {} health and {} power.".format(self.name, self.health, self.power))
 
+    def dead(self):
+        print("You received {} coins for defeating {}!".format(self.bounty, self.name))
+
 class Hero(Character):
 
-    def __init__(self, name, health, power):
-        super().__init__(name, health, power)
+    def __init__(self, name, health, power, bounty):
+        super().__init__(name, health, power, bounty)
 
     def attack(self, enemy):
         # DOUBLE DAMAGE ADDED TO HERO
@@ -30,8 +34,10 @@ class Hero(Character):
         if prob == 2:
             self.power *= 2
             print('DOUBLE DAMAGE ACTIATED FOR THE HERO! POWER INCREASE FROM 5 TO 10')
+
         enemy.health -= self.power
         print("The {} does {} damage to the {}.".format(self.name, self.power, enemy.name))
+
         if enemy.health <= 0:
             print("The {} is dead.".format(enemy.name))
 
@@ -44,19 +50,19 @@ class Hero(Character):
 
 class Goblin(Character):
 
-    def __init__(self, name, health, power):
-        super().__init__(name, health, power)
+    def __init__(self, name, health, power, bounty):
+        super().__init__(name, health, power, bounty)
 
 
 class Zombie(Character):
 
-    def __init__(self, name, health, power):
-        super().__init__(name, health, power)
+    def __init__(self, name, health, power, bounty):
+        super().__init__(name, health, power, bounty)
 
 class Medic(Character):
 
-    def __init__(self, name, health, power):
-        super().__init__(name, health, power)
+    def __init__(self, name, health, power, bounty):
+        super().__init__(name, health, power, bounty)
 
     def recuperate(self):
         prob = randint(1,10)
@@ -67,8 +73,8 @@ class Medic(Character):
 
 class Shadow(Character):
 
-    def __init__(self, name, health, power):
-        super().__init__(name, health, power)
+    def __init__(self, name, health, power, bounty):
+        super().__init__(name, health, power, bounty)
 
     def take_damage(self, enemy):
         prob = randint(1,10)
