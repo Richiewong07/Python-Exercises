@@ -53,8 +53,7 @@ class Hero(Character):
         self.bounty += enemy.bounty
         print('Hero now has {} coins'.format(self.bounty))
 
-    def reset_game(self):
-        self.health = self.health
+
 
 
 class Goblin(Character):
