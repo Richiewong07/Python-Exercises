@@ -23,6 +23,9 @@ class Character():
     def dead(self):
         print("You received {} coins for defeating {}!".format(self.bounty, self.name))
 
+    def reset_game(self):
+        self.health = self.health
+
 class Hero(Character):
 
     def __init__(self, name, health, power, bounty):
@@ -46,6 +49,12 @@ class Hero(Character):
         enemy.health -= 0
         print("{0} done 0 damage to the {1}. {1} cannot die!".format(self.name, enemy.name))
 
+    def receive_coins(self, enemy):
+        self.bounty += enemy.bounty
+        print('Hero now has {} coins'.format(self.bounty))
+
+    def reset_game(self):
+        self.health = self.health
 
 
 class Goblin(Character):
