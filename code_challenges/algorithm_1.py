@@ -1,15 +1,17 @@
-my_list = list(range(1, 101))
-my_list_2 = []
-print(my_list_2)
+# Algorithm 1
+# Write a program that prints the numbers from 1 to 100. But for multiples of three print “Fizz” instead of the number and for the multiples of five print “Buzz”. For numbers which are multiples of both three and five print “FizzBuzz”.
 
-for i in my_list:
-    if i %3 == 0 and i %5 == 0:
-        my_list_2.append('FizzBuzz')
-    elif i %3 == 0:
-        my_list_2.append('Fizz')
-    elif i %5 == 0:
-         my_list_2.append('Buzz')
-    else:
-        my_list_2.append(i)
-    i += 1
-print(my_list_2)
+
+
+def fizzbuzz():
+    for num in range(1, 101):
+        if num %3 == 0 and num %5 ==0:
+            print('FizzBuzz')
+        elif num %3 == 0:
+            print('Fuzz')
+        elif num %5 == 0:
+            print('Buzz')
+        else:
+            print(num)
+
+fizzbuzz()

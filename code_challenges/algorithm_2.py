@@ -1,8 +1,15 @@
-my_list = list(range(0, 1000))
-sum = 0
+# Algorithm 2
+# If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
+#
+# Find the sum of all the multiples of 3 or 5 below 1000.
 
-for i in my_list:
-    if i %3 == 0 or i %5 == 0:
-        sum += i
+def multiples():
+    total = 0
+    for num in range(1, 101):
+        if num %3 == 0 or num %5 ==0:
+            total += num
 
-print(sum)
+    return total
+
+result = multiples()
+print(result)
