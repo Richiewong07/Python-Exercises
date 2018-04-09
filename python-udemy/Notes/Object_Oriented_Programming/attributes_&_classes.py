@@ -15,7 +15,7 @@ class Dog():
         # EXPECT A BOOLEAN T/F
         self.spots = spots
 
-my_dog = Dog(breed = 'Lab', name = 'Sammy', spots = 'False')
+my_dog = Dog(breed = 'Lab', name = 'Sammy', spots = False)
 
 print(type(my_dog))
 
