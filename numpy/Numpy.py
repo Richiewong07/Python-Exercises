@@ -20,7 +20,7 @@ print(sys.getsizeof(5) * len(list))
 array = np.arange(1000)
 print(array.size * array.itemsize)
 
-# TEST TIME
+# LIST TIME VS ARRANGE TIME
 size = 100000
 l1 = range(size)
 l2 = range(size)
