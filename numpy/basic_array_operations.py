@@ -55,3 +55,11 @@ print(np.sqrt(a))
 
 # GIVES STANDARD DEVIATION OF EACH ELEMENT
 np.std(a)
+
+
+
+a = np.array([[1, 2], [2, 3]])
+b = np.array([[3, 4], [5, 6]])
+
+# GIVES DOT PRODUCT
+print(a.dot(b))
