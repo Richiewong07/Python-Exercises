@@ -1,0 +1,3 @@
+Unit Test - verifies that one specific aspect of a a function's behavior is correct
+
+Test Case = a collection of unit tests that together prove that a function behaves as it's supposed to, within the full range of situations you expect it to handle
