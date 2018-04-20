@@ -21,4 +21,13 @@ with open(file_path) as file_object:
 file_name = 'pi_digits.txt'
 with open(file_name) as file_objects:
     for line in file_objects:
-        print(line)
+        print(line.rstrip())
+
+
+# MAKING A LIST OF LINES FROM A FILE
+file_name = 'pi_digits.txt'
+with open(file_name) as file_objects:
+    lines = file_objects.readlines()        # ALLOWS ACCESS TO FILE OBJECT OUTSIDE OF BLOCK, readlines() --> stores lines in a list
+
+for line in lines:
+    print(line.rstrip())
