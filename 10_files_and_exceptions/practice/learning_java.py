@@ -3,5 +3,8 @@
 file_name = 'practice/learning_python.txt'
 
 with open(file_name) as file_objects:
-    for line in file_objects:
-        print(line.replace('Python', 'Java').rstrip())
+    lines = file_objects.readlines()
+
+    for line in lines:
+        line = line.replace('Python', 'Java').rstrip()
+        print(line)
