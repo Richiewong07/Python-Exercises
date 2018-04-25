@@ -1,5 +1,5 @@
 
-filename = 'practice/row.txt'
+filename = 'row.txt'
 
 with open(filename) as file_object:
     content = file_object.read()
