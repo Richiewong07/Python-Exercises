@@ -1,3 +1,0 @@
-Python code is easy to read and understand.
-Python is productive.
-Python is dangerous.
