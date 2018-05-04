@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html amp lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <meta name="robots" content="index, follow">
+    <meta property="og:image" content="/static/img/header-bg.jpg"/>
+    <link rel="icon" href="/static/img/logo1.ico" type="image/x-icon" />
+    <title>About</title>
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/agency1.css" rel="stylesheet">
+    <link href="/static/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-77762958-1', 'auto');
+        ga('send', 'pageview');
+        </script>
+        <meta name="google-site-verification" content="LMoF0tsRv_rWeU8birCDUTmkdywQCbNeDlYeWwRfQWI" />
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-8990144480776862",
+            enable_page_level_ads: true
+        });
+    </script>
+<style>
+#portfolio .portfolio-item .portfolio-caption p {
+    overflow: hidden;
+}
+</style>
+    
+    
+</head>
+<body id="page-top" class="index">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="/"><img src="/static/img/medium.png" class="logo" alt="HipsterCode" /></a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="/">Home</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="/blog/blog/">Blog</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="/pricing/">Pricing</a>
+                    </li>
+                    
+                      <li>
+                          <a class="page-scroll" href="/login/">Log In</a>
+                      </li>
+                      <li>
+                          <a class="page-scroll" href="/accounts/register/">Register</a>
+                      </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">About Us</h2>
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+
+              <img src="/static/img/medium.png" alt="HipsterCode" class="img-about" />
+
+              <p class="about-text">
+                  Noob Media LLC is a media company located near Washington, D.C.   
+                  We're specialist at using social media exposure to find your right IT talent at a minimal cost.
+              </p>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="row">
+                    </div>
+                    <div class="row">
+                        <span class="copyright">Copyright &copy; 2018 | Noob Media LLC | All Rights Reserved</span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline social-buttons">
+                        <li><a href="https://twitter.com/realchrishawkes"><i class="fa fa-twitter"></i></a>
+                        </li>
+                        <li><a href="https://www.youtube.com/user/noobtoprofessional"><i class="fa fa-youtube"></i></a>
+                        </li>
+                        <li><a href="https://www.instagram.com/officialhipstercode/"><i class="fa fa-instagram"></i></a>
+                        </li>
+                        <li><a href="https://www.linkedin.com/in/christopher-hawkes-130aa835"><i class="fa fa-linkedin"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline quicklinks">
+                        <li><a href="/privacy">Privacy Policy</a>
+                        </li>
+                        <li><a href="https://www.amazon.com/b?_encoding=UTF8&tag=noobmusiccom-20&linkCode=ur2&linkId=22c38f15da575a8e59173ded302b1ce5&camp=1789&creative=9325&node=13900871">Affiliate</a>
+                        </li>
+                        <li><a href="/terms">Terms of Use</a>
+                        </li>
+                        <li><a href="/copyright">Copyright</a>
+                        </li>
+                        <li><a href="/about">About Us</a>
+                        </li>
+                        <li><a href="/contact">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="/static/js/jquery.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="/static/js/classie.js"></script>
+    <script src="/static/js/cbpAnimatedHeader.js"></script>
+    <script src="/static/js/jqBootstrapValidation.js"></script>
+    <script src="/static/js/contact_me.js"></script>
+    <script src="/static/js/agency.js"></script>
+    
+
+    
+</body>
+</html>
