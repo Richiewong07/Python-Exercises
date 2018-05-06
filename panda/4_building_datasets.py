@@ -4,7 +4,8 @@ import pandas as pd
 # api_key = open('quandlapikey.txt', 'r').read()
 api_key = 'xthHuGDE95YvGyvszxjU'
 df = quandl.get('FMAC/HPI_AK', authtoken=api_key)
-# print(df.head())
+df.rename(columns = {'Value':'AK'}, inplace=True)
+print(df.head())
 
 fiddy_states = pd.read_html('https://simple.wikipedia.org/wiki/List_of_U.S._states')
 
