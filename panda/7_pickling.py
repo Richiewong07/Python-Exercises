@@ -14,17 +14,16 @@ def grab_initial_state_data():
 
     for abbv in states:
         query = 'FMAC/HPI_' + str(abbv)
-        header = abbv
 
         df = quandl.get(query, authtoken=api_key)
-        df.rename(columns = {'Value': header}, inplace=True)
+        df.rename(columns = {'Value': abbv}, inplace=True)
 
         if main_df.empty:
             main_df = df
         else:
             main_df = main_df.join(df)
 
-    print(main_df.head())
+    # print(main_df.head())
 
     # USE PICKLE TO SAVE DATA
     pickle_out = open('fiddy_states.pickle', 'wb')
@@ -39,6 +38,6 @@ print(HPI_data)
 
 
 # PANADA PICKLE METHOD
-# HPI_data.to_pickle('pickle.pickle')
-# HPI_data2 = pd.read_pickle('pickle.pickle')
+HPI_data.to_pickle('pickle.pickle')
+HPI_data2 = pd.read_pickle('pickle.pickle')
 # print(HPI_data2)
