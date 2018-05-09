@@ -51,7 +51,11 @@ HPI_data['TX1yr'] = HPI_data['TX'].resample('A').mean()
 print(HPI_data[['TX', 'TX1yr']].head())
 
 # DROP NaN VALUES
-HPI_data.dropna(inplace=True)
+# HPI_data.dropna(inplace=True)
+# HPI_data.dropna(how='all', inplace=True)
+
+# FORWARD FILL / BACK FILL
+HPI_data.fillna(method='bfill, inplace=True)
 print(HPI_data[['TX', 'TX1yr']].head())
 
 HPI_data[['TX', 'TX1yr']].plot(ax = ax1)
