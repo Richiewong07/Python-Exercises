@@ -1,4 +1,4 @@
- import quandl
+import quandl
 import pandas as pd
 import pickle
 import matplotlib.pyplot as plt
@@ -8,9 +8,18 @@ style.use('fivethirtyeight')
 
 api_key = 'xthHuGDE95YvGyvszxjU'
 
+def mortgage_30y():
+    df = quandl.get("FMAC/MORTG", trim_start = "1975-01-01", authtoken=api_key)
+    df["Value"] = (df["Value"] - df["Value"][0]) / df["Value"][0] * 100
+    df = df.resample('D').sum()
+    df = df.resample('M').sum()
+    df.columns = ["M30"]
+    return df
+
 def state_list():
     fiddy_states = pd.read_html('https://simple.wikipedia.org/wiki/List_of_U.S._states')
     return fiddy_states[0][1][1:]
+
 
 def grab_initial_state_data():
     states = state_list()
@@ -31,29 +40,22 @@ def grab_initial_state_data():
 
     # print(main_df.head())
 
-    # USE PICKLE TO SAVE DATA
     pickle_out = open('fiddy_states3.pickle', 'wb')
     pickle.dump(main_df, pickle_out)
     pickle_out.close()
 
-# grab_initial_state_data()
+
+def HPI_BenchMark():
+    df = quandl.get("FMAC/HPI_USA", authtoken=api_key)
+    df.rename(columns = {'Value': "United States"}, inplace=True)
+    df["United States"] = (df["United States"] - df["United States"][0]) / df["United States"][0] * 100
+    return df
 
 
+m30 = mortgage_30y()
+HPI_data = pd.read_pickle('fiddy_states.pickle')
+HPI_bench = HPI_BenchMark()
 
-HPI_data = pd.read_pickle('fiddy_states3.pickle')
+state_HPI_M30 = HPI_data.join(m30)
 
-# PERCENT CHANGE GRAPH
-fig = plt.figure()
-ax1 = plt.subplot2grid((1,1),(0,0))
-
-TX1yr = HPI_data['TX'].resample('A').mean()
-# TX2yr = HPI_data['TX'].resample('A').ohlc()
-print(TX1yr.head())
-
-HPI_data['TX'].plot(ax=ax1, label='Monthly TX HPI')
-TX1yr.plot(ax=ax1, label='Yearly TX HPI')
-# TX2yr.plot(ax=ax1, label='High Low')
-
-
-plt.legend(loc=4)
-plt.show()
+print(state_HPI_M30.corr()['M30'].describe())
